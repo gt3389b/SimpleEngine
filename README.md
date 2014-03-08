@@ -1,4 +1,6 @@
 SimpleEngine
 ============
 
-test engine for OpenSSL
+Simple test engine for OpenSSL.
+
+
