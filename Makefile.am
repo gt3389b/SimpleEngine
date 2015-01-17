@@ -1,4 +1,6 @@
 openssl_engine_LTLIBRARIES=libsimple.la
-openssl_enginedir=@libdir@/openssl/engines
+
+# Removed "openssl/engines" for OSX
+openssl_enginedir=@libdir@/engines
 
 libsimple_la_SOURCES= simpleengine.c
