@@ -2,7 +2,7 @@
 # configure.in for the OpenSSL simple engine project
 #
 
-AC_INIT(openssl-simpleenigne, 2.0.0)
+AC_INIT(openssl-simpleengine, 2.0.0)
 AM_INIT_AUTOMAKE(1.6.3)
 
 # Debugging support
