@@ -8,7 +8,6 @@
 static const char *engine_id = "simple";
 static const char *engine_name = "simple engine";
 
-#if 0
 static int simple_engine_ctrl(ENGINE *e, int cmd, long i, void *p, void(*f) ()) 
 {
     printf("Currently: do nothing ;)\n");
@@ -18,13 +17,13 @@ static int simple_engine_ctrl(ENGINE *e, int cmd, long i, void *p, void(*f) ())
     }
     return 0;
 }
-#endif
 
 static int simple_engine_bind(ENGINE *e, const char *id)
 {
     printf ("Loading simple engine!\n");
     if (!ENGINE_set_id(e, engine_id) ||
-        !ENGINE_set_name(e, engine_name)) {
+        !ENGINE_set_name(e, engine_name)  ||
+	     !ENGINE_set_ctrl_function(e, simple_engine_ctrl)) {
         return 0;
     }
     else {
