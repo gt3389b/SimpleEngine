@@ -5,6 +5,9 @@
 #include <openssl/objects.h>
 #include <openssl/engine.h>
 
+static const char *engine_id = "simple";
+static const char *engine_name = "simple engine";
+
 static int simple_engine_ctrl(ENGINE *e, int cmd, long i, void *p, void(*f) ()) 
 {
     printf("Currently: do nothing ;)\n");
@@ -18,8 +21,8 @@ static int simple_engine_ctrl(ENGINE *e, int cmd, long i, void *p, void(*f) ())
 static int simple_engine_bind(ENGINE *e, const char *id)
 {
     printf ("Loading simple engine!\n");
-    if (!ENGINE_set_id(e, "simple") ||
-        !ENGINE_set_name(e, "simple engine")) {
+    if (!ENGINE_set_id(e, engine_id) ||
+        !ENGINE_set_name(e, engine_name)) {
         return 0;
     }
     else {
