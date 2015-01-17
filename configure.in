@@ -46,6 +46,6 @@ CFLAGS="$CFLAGS -Wall -DLINUX -DOPENCRYPTOKI"
 AC_SUBST(CFLAGS)
 AC_SUBST(LIBDIR, $libdir)
 
-AC_OUTPUT(Makefile src/Makefile openssl.cnf.sample)
+AC_OUTPUT(Makefile openssl.cnf.sample)
 
 echo "CFLAGS=$CFLAGS"
