@@ -1,8 +1,8 @@
 #
-# configure.in for the OpenSSL IBM PKCS#11 engine project
+# configure.in for the OpenSSL simple engine project
 #
 
-AC_INIT(openssl-ibmpkcs11, 1.0.0, opencryptoki-users@lists.sf.net)
+AC_INIT(openssl-simpleenigne, 2.0.0)
 AM_INIT_AUTOMAKE(1.6.3)
 
 # Debugging support
@@ -27,7 +27,7 @@ fi
 test_CFLAGS=${CFLAGS+set}
 if test "$test_CFLAGS" != set; then
 	if test "x$enable_debug" == "xyes"; then
-		CFLAGS="-O0 -g -DDEBUG -DPKCS11_DEBUG"
+		CFLAGS="-O0 -g -DDEBUG"
 	else
 		CFLAGS="-O2"
 	fi
@@ -42,7 +42,7 @@ AC_DISABLE_STATIC
 AC_PROG_CC
 AC_PROG_LIBTOOL
 
-CFLAGS="$CFLAGS -Wall -DLINUX -DOPENCRYPTOKI"
+CFLAGS="$CFLAGS -Wall"
 AC_SUBST(CFLAGS)
 AC_SUBST(LIBDIR, $libdir)
 
