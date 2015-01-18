@@ -4,7 +4,7 @@ SimpleEngine
 Simple test engine for OpenSSL.
 
 
-# Building, installing and using
+## Building, installing and using
 ```bash
 
 # create the autotools stuff
